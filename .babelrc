@@ -1,0 +1,42 @@
+{
+  "env": {
+    "development": {
+      "presets": ["next/babel"],
+      "plugins": [
+        "inline-react-svg",
+        "react-element-info",
+        ["module-resolver", {
+          "root": ["./"],
+          "alias": {
+            "@helpers": "./helpers",
+            "@api": "./api",
+            "@components": "./components",
+            "@styles": "./components/styles",
+            "@theme": "./components/theme",
+            "@static": "./static",
+            "@queries": "./queries"
+          }
+        }]
+      ]
+    },
+    "production": {
+      "presets": ["next/babel"],
+      "plugins": [
+        "inline-react-svg",
+        "transform-remove-console",
+        ["module-resolver", {
+          "root": ["./"],
+          "alias": {
+            "@helpers": "./helpers",
+            "@queries": "./queries",
+            "@api": "./api",
+            "@components": "./components",
+            "@styles": "./components/styles",
+            "@theme": "./components/theme",
+            "@static": "./static"
+          }
+        }]
+      ]
+    }
+  }
+}

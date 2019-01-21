@@ -1,0 +1,41 @@
+{
+  "name": "ac-react-simple-boilerplate",
+  "version": "1.0.0",
+  "description": "A light React SSR boilerplate built with React.js, styled-components, next.js, Apollo and GraphQL",
+  "main": "server.js",
+  "author": "Abdullah Ceylan <ben@abdullahceylan.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node server.js",
+    "dev:next": "next",
+    "build": "export NODE_ENV=production; next build",
+    "start": "export NODE_ENV=production; node server.js",
+    "start:next": "next start -p $PORT",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.1.27",
+    "cross-env": "5.0.5",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.11",
+    "next": "^7.0.2",
+    "prop-types": "^15.5.7-alpha.1",
+    "react": "^16.8.0-alpha.1",
+    "react-apollo": "^2.4.0",
+    "react-dom": "^16.8.0-alpha.1",
+    "styled-components": "^4.1.3",
+    "styled-reset": "^1.6.4",
+    "styled-tools": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "babel-plugin-module-resolver": "^3.1.2",
+    "babel-plugin-react-element-info": "^1.0.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react-hooks": "^0.0.0"
+  }
+}
