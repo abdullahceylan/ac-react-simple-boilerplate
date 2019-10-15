@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
@@ -19,12 +19,10 @@ class ACApp extends App {
     const { Component, pageProps, apolloClient } = this.props;
     return (
       <ApolloProvider client={apolloClient}>
-        <Container>
-          <Head>
-            <title>AC React, next.js, GraphQL Boilerplate</title>
-          </Head>
-          <Component {...pageProps} />
-        </Container>
+        <Head>
+          <title>AC React, next.js, GraphQL Boilerplate</title>
+        </Head>
+        <Component {...pageProps} />
       </ApolloProvider>
     );
   }
